@@ -1,5 +1,6 @@
 resources:
 - name: {{ env["name"]}}
+  description: staging instance
   type: compute.v1.instance
   properties:
     zone: {{ properties["zone"] }}
