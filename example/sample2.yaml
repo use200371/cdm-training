@@ -2,7 +2,7 @@ imports:
 - path: vm-template.jinja
 
 resources:
-- name: 
+- name: dev-instance
   type: vm-template.jinja
   properties:
     machineType: f1-micro
