@@ -57,6 +57,8 @@ $(ref.[RESOURCE_NAME].[PROPERTY])
 
 ## リファレンス
 
+[サポートされるリソース](https://cloud.google.com/deployment-manager/docs/configuration/supported-resource-types?hl=ja)
+
 ### Compute Engine 
 
 - [API](https://cloud.google.com/compute/docs/reference/rest/v1/instances?hl=ja)
