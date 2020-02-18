@@ -1,6 +1,6 @@
 imports:
 - path: service-account-template.jinja
-- path: vm.jinja
+- path: vm-template.jinja
 
 resources:
 - name: &SA_NAME my-vm-access
