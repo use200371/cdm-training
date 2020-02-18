@@ -1,0 +1,17 @@
+imports:
+    - path: vm-beta-template.jinja
+    - path: service-account-beta-template.jinja
+    
+resources:
+- name: dev-instance
+  type: vm-template.jinja
+  properties:
+    machineType: f1-micro
+    zone: asia-northeast1-a
+
+# サービスアカウント
+- name: dev-instance-service
+  type: service-account-template.jinja
+  properties:
+    displayName: sample
+    accountIdSuffix: sample

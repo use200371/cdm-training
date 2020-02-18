@@ -1,9 +1,9 @@
 resources:
 - name: {{ env["name"] }}
-  type: compute.v1.instance
+  type: gcp-types/compute-v1:instances
   properties:
     zone: {{ properties["zone"] }}
-    machineType: https://www.googleapis.com/compute/v1/projects/{{ env["project"] }}/zones/{{ properties["zone"] }}/machineTypes/{{ properties["machineType"] }}
+    machineType: zones/{{ properties["zone"] }}/machineTypes/{{ properties["machineType"] }}
     tags: {
       [
         "http-server",
@@ -16,11 +16,14 @@ resources:
       boot: true
       autoDelete: true
       initializeParams:
-        sourceImage: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/family/centos-7
+        sourceImage: projects/centos-cloud/global/images/family/centos-7
     networkInterfaces:
-    - network: https://www.googleapis.com/compute/v1/projects/{{ env["project"] }}/global/networks/default
+    - network: projects/{{ env["project"] }}/global/networks/default
       accessConfigs:
       - name: External NAT
         type: ONE_TO_ONE_NAT
     scheduling:
       preemptible: true
+    serviceAccounts : {
+        email: $(ref.dev-instance-service.serviceAccounts[0].email)
+    }
