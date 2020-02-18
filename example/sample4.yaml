@@ -1,12 +1,13 @@
 imports:
 - path: service-account-template.jinja
-- path: vm-template.jinja
-    
+- path: vm.jinja
+
 resources:
 - name: &SA_NAME my-vm-access
-　type: service-account-template.jinja
-
+  type: service-account-template.jinja
 - name: my-vm
-　type: vm-template.jinja
+  type: vm-template.jinja
   properties:
     serviceAccountId: *SA_NAME
+    machineType: f1-micro
+    zone: asia-northeast1-a
