@@ -11,7 +11,7 @@ resources:
 
 # サービスアカウント
 - name: dev-instance-service
-  type: service-account-template.jinja
+  type: service-account-beta-template.jinja
   properties:
     displayName: sample
     accountIdSuffix: sample
