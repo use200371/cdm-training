@@ -1,10 +1,10 @@
 imports:
-- path: service-account-template.jinja
+- path: service-accout-template.jinja
 - path: vm-template.jinja
 
 resources:
 - name: &SA_NAME my-vm-access
-  type: service-account-template.jinja
+  type: service-accout-template.jinja
 - name: my-vm
   type: vm-template.jinja
   properties:
