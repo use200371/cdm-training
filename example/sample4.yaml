@@ -1,0 +1,12 @@
+imports:
+- path: service-account-template.jinja
+- path: vm-template.jinja
+    
+resources:
+- name: &SA_NAME my-vm-access
+　type: service-account-template.jinja
+
+- name: my-vm
+　type: vm-template.jinja
+  properties:
+    serviceAccountId: *SA_NAME
