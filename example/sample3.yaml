@@ -4,7 +4,7 @@ imports:
     
 resources:
 - name: dev-instance
-  type: vm-template.jinja
+  type: vm-beta-template.jinja
   properties:
     machineType: f1-micro
     zone: asia-northeast1-a
