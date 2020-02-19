@@ -5,7 +5,7 @@ resources:
     zone: {{ properties["zone"] }}
     machineType: zones/{{ properties["zone"] }}/machineTypes/{{ properties["machineType"] }}
     tags: {
-      [
+      items: [
         "http-server",
         "https-server"
       ]
