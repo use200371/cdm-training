@@ -7,7 +7,7 @@ resources:
 - name: dev-instance-service
   type: service-account-beta-template.jinja
   properties:
-    displayName: &TEST sample3
+    displayName: sample3
     accountIdSuffix: sample3
 
 - name: dev-instance
@@ -15,5 +15,5 @@ resources:
   properties:
     machineType: f1-micro
     zone: asia-northeast1-a
-    serviceAccountId: *TEST
+    serviceAccountId: sample3
   
