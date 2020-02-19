@@ -7,13 +7,13 @@ resources:
 - name: dev-instance-service
   type: service-account-beta-template.jinja
   properties:
-    displayName: sample3
-    accountIdSuffix: sample3
+    displayName: sample4
+    accountIdSuffix: sample4
 
 - name: dev-instance
   type: vm-beta-template.jinja
   properties:
     machineType: f1-micro
     zone: asia-northeast1-a
-    serviceAccountId: sample3
+    serviceAccountId: sample4
   
