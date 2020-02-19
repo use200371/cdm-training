@@ -26,5 +26,3 @@ resources:
       preemptible: true
     serviceAccounts:
     - email: $(ref.{{ properties['serviceAccountId'] }}.email)
-      scopes:
-      - "https://www.googleapis.com/auth/cloud-platform"
