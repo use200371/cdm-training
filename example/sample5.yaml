@@ -1,0 +1,10 @@
+imports:
+    - path: service-account-beta-template.jinja
+    
+resources:
+# サービスアカウント
+- name: dev-instance-service
+  type: service-account-beta-template.jinja
+  properties:
+    displayName: sample5
+    accountIdSuffix: sample5
