@@ -4,9 +4,3 @@ resources:
   properties:
     accountId: {{ env['name'] }}
     displayName: serviceAccount-{{ env['name'] }}
-  accessControl:
-    gcpIamPolicy:
-      bindings:
-      - role: roles/editor
-        members:
-        - "serviceAccount:gce-service-{{ properties['accountIdSuffix'] }}@{{ env["project"] }}.iam.gserviceaccount.com"
