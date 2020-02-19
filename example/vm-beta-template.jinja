@@ -24,6 +24,5 @@ resources:
         type: ONE_TO_ONE_NAT
     scheduling:
       preemptible: true
-    serviceAccounts : {
-        email: $(ref.dev-instance-service.serviceAccounts[0].email)
-    }
+    serviceAccounts:
+    - email: $(ref.{{ properties['serviceAccountId'] }}.email)
