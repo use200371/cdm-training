@@ -26,3 +26,6 @@ resources:
       preemptible: true
     serviceAccounts:
     - email: $(ref.{{ properties['serviceAccountId'] }}.email)
+      scopes:
+      - https://www.googleapis.com/auth/logging.write
+      - https://www.googleapis.com/auth/monitoring.write
