@@ -3,14 +3,14 @@ imports:
     - path: ../template/service-account-beta-template.jinja
     
 resources:
-- name: dev-instance
-  type: vm-beta-template.jinja
+- name: sample3-instance
+  type: ../template/vm-beta-template.jinja
   properties:
     machineType: f1-micro
     zone: asia-northeast1-a
 
 # サービスアカウント
-- name: dev-instance-service
+- name: sample3-instance-service
   type: service-account-beta-template.jinja
   properties:
     displayName: sample3

@@ -3,10 +3,10 @@ imports:
 - path: ../template/vm-template.jinja
 
 resources:
-- name: &SA_NAME my-vm-access
-  type: service-accout-template.jinja
-- name: my-vm
-  type: vm-template.jinja
+- name: &SA_NAME sample4-instance
+  type: ../template/service-accout-template.jinja
+- name: sample4-instance
+  type: ../template/vm-template.jinja
   properties:
     serviceAccountId: *SA_NAME
     machineType: f1-micro

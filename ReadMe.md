@@ -13,11 +13,27 @@
 ```
 gcloud config set project [プロジェクトID]
 ```
-- Deployment Manager APIを有効にします。使用するリソースを有効にする場合は、合わせて設定を行います。
+- Deployment Manager APIを有効にします。
 
 ```
 gcloud services enable deploymentmanager.googleapis.com
 ```
+
+使用するリソースのAPIも有効化する必要があります。
+
+例. Compute Engine(※課金アカウントがプロジェクトに設定されている必要があります。またプロジェクト作成直後はAPIの有効化に時間が掛かります。)
+
+```
+gcloud services enable compute.googleapis.com
+```
+
+## サンプルの使い方
+
+- Cloud Shellにて当リポジトリをクーロンします。
+
+- 下記のコマンドにて作成、プレビューします。
+
+- 最後に必ず削除を行います。
 
 ## コマンド
 

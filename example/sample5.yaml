@@ -3,8 +3,8 @@ imports:
     
 resources:
 # サービスアカウント
-- name: dev-instance-service
-  type: service-account-beta-template.jinja
+- name: sample5-instance-service
+  type: ../template/service-account-beta-template.jinja
   properties:
     displayName: sample5
     accountIdSuffix: sample5
