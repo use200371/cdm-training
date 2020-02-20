@@ -33,6 +33,12 @@ gcloud services enable deploymentmanager.googleapis.com compute.googleapis.com
 
 <walkthrough-editor-open-file filePath="example/sample2.yaml"></walkthrough-editor-open-file>
 
+- ディレクトリを移動します。
+
+```sh
+cd cdm-training/example
+```
+
 - CentOSサーバのインスタンスを作成します。
 
 ```sh
