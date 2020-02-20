@@ -1,9 +1,10 @@
 imports:
 - path: ../template/vm-template.jinja
+  name: vm-template
 
 resources:
 - name: dev-instance
-  type: vm-template.jinja
+  type: vm-template
   properties:
     machineType: f1-micro
     zone: asia-northeast1-a
