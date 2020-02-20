@@ -36,7 +36,7 @@ gcloud services enable deploymentmanager.googleapis.com compute.googleapis.com
 - ディレクトリを移動します。
 
 ```sh
-cd cdm-training/example
+cd example
 ```
 
 - CentOSサーバのインスタンスを作成します。
