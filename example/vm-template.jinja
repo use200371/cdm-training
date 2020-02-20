@@ -24,5 +24,3 @@ resources:
         type: ONE_TO_ONE_NAT
     scheduling:
       preemptible: true
-    serviceAccounts:
-    - email: $(ref.{{ properties['serviceAccountId'] }}.email)
