@@ -1,5 +1,5 @@
 imports:
-- path: vm-template.jinja
+- path: ../template/vm-template.jinja
 
 resources:
 - name: dev-instance

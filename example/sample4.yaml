@@ -1,6 +1,6 @@
 imports:
-- path: service-accout-template.jinja
-- path: vm-template.jinja
+- path: ../template/service-accout-template.jinja
+- path: ../template/vm-template.jinja
 
 resources:
 - name: &SA_NAME my-vm-access

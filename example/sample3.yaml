@@ -1,6 +1,6 @@
 imports:
-    - path: vm-beta-template.jinja
-    - path: service-account-beta-template.jinja
+    - path: ../template/vm-beta-template.jinja
+    - path: ../template/service-account-beta-template.jinja
     
 resources:
 - name: dev-instance

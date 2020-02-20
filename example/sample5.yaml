@@ -1,5 +1,5 @@
 imports:
-    - path: service-account-beta-template.jinja
+    - path: ../template/service-account-beta-template.jinja
     
 resources:
 # サービスアカウント
