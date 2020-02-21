@@ -18,4 +18,4 @@ resources:
   properties:
     machineType: f1-micro
     zone: asia-northeast1-a
-    serviceAccountId: gce-service-sample3
+    serviceAccountId: *SA_NAME
