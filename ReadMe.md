@@ -75,6 +75,10 @@ $(ref.[RESOURCE_NAME].[PROPERTY])
 
 ### テンプレート
 
+- 基本的にYAMLファイルにて構成を管理するが、テンプレートを用いる事で再利用可能な構成を作成する事が可能となる
+
+- テンプレートを使用する事でYAMLには設定値を記述するだけに留める事となる
+
 ## リファレンス
 
 [サポートされるリソース](https://cloud.google.com/deployment-manager/docs/configuration/supported-resource-types?hl=ja)

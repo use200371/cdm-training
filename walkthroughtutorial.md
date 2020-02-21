@@ -39,14 +39,17 @@ gcloud services enable deploymentmanager.googleapis.com compute.googleapis.com
 cd example
 ```
 
+
 - CentOSサーバのインスタンスを作成します。
 
 ```sh
 gcloud deployment-manager deployments create sample2 --config sample2.yaml
 ```
 
+
 - 作成された事が確認出来たら後片付けをします。
 
 ```sh
 gcloud deployment-manager deployments delete sample2
 ```
+
