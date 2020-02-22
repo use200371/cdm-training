@@ -79,6 +79,27 @@ $(ref.[RESOURCE_NAME].[PROPERTY])
 
 - テンプレートを使用する事でYAMLには設定値を記述するだけに留める事となる
 
+## サポートリソース
+
+- Cloud Deploy Managerにてサポートされるリソースは以下のとおり
+
+- ただし、下記のリソース中の全てを扱えるわけではない(制御出来ないものも存在する)
+
+| リソース名 |
+----|
+| Google App Engine |
+| BigQuery |
+| Resource Manager |
+| Compute Engine |
+| Google Kubernetes Engine |
+| Cloud Pub/Sub |
+| Cloud DNS |
+| Cloud IAM |
+| Stackdriver Logging |
+| Cloud Spanner |
+| Cloud SQL |
+| Cloud Storage |
+
 ## リファレンス
 
 [サポートされるリソース](https://cloud.google.com/deployment-manager/docs/configuration/supported-resource-types?hl=ja)
