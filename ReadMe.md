@@ -29,6 +29,10 @@ gcloud services enable compute.googleapis.com
 
 ## サンプルの使い方
 
+- 以下のボタンから自身のCloud Shell上に当リポジトリを展開します
+
+[![Open in Cloud Shell](http://gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https%3A%2F%2Fgithub.com%2Fuse200371%2Fcdm-training.git&cloudshell_tutorial=walkthroughtutorial.md)
+
 - Cloud Shellにて当リポジトリをクーロンします。
 
 - 下記のコマンドにて作成、プレビューします。
@@ -70,6 +74,31 @@ $(ref.[RESOURCE_NAME].[PROPERTY])
 [サポートされるリソースタイプ](https://cloud.google.com/deployment-manager/docs/configuration/supported-resource-types?hl=ja)
 
 ### テンプレート
+
+- 基本的にYAMLファイルにて構成を管理するが、テンプレートを用いる事で再利用可能な構成を作成する事が可能となる
+
+- テンプレートを使用する事でYAMLには設定値を記述するだけに留める事となる
+
+## サポートリソース
+
+- Cloud Deploy Managerにてサポートされるリソースは以下のとおり
+
+- ただし、下記のリソース中の全てを扱えるわけではない(制御出来ないものも存在する)
+
+| リソース名 |
+----|
+| Google App Engine |
+| BigQuery |
+| Resource Manager |
+| Compute Engine |
+| Google Kubernetes Engine |
+| Cloud Pub/Sub |
+| Cloud DNS |
+| Cloud IAM |
+| Stackdriver Logging |
+| Cloud Spanner |
+| Cloud SQL |
+| Cloud Storage |
 
 ## リファレンス
 
