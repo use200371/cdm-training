@@ -2,7 +2,7 @@
 
 curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
 
-cat << EOS >> ~/.bash_profile
+cat << EOS >> ~/.bashrc
 export PATH="/home/`whoami`/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
