@@ -9,8 +9,8 @@ eval "$(pyenv virtualenv-init -)"
 EOS
 
 # python install
-pyenv install 2.7.14
-pyenv global 2.7.14
+pyenv install 3.8.1
+pyenv global 3.8.1
 python --version
 
 # ansible install
