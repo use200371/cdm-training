@@ -1,12 +1,15 @@
 imports:
 - path: ../template/service-accout-template.jinja
+  name: service-accout-template.jinja
 - path: ../template/vm-template.jinja
+  name: vm-template.jinja
 
 resources:
-- name: &SA_NAME sample4-instance
-  type: ../template/service-accout-template.jinja
+- name: &SA_NAME sample4-instance-sa
+  type: service-accout-template.jinja
+
 - name: sample4-instance
-  type: ../template/vm-template.jinja
+  type: vm-template.jinja
   properties:
     serviceAccountId: *SA_NAME
     machineType: f1-micro

@@ -24,3 +24,9 @@ resources:
         type: ONE_TO_ONE_NAT
     scheduling:
       preemptible: true
+    {% if properties['serviceAccountId'] is defined %}
+    serviceAccounts:
+    - email: $(ref.{{ properties['serviceAccountId'] }}.email)
+      scopes:
+        - https://www.googleapis.com/auth/monitoring.write
+    {% endif %}
