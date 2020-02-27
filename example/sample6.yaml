@@ -1,0 +1,23 @@
+imports:
+- path: ../template/service-accout-template.jinja
+  name: service-accout-template.jinja
+- path: ../template/vm-template.jinja
+  name: vm-template.jinja
+    
+resources:
+- name: &SA_NAME sample6-instance-sa
+  type: service-accout-template.jinja
+
+- name: sample6-instance
+  type: vm-template.jinja
+  properties:
+    serviceAccountId: *SA_NAME
+    machineType: f1-micro
+    zone: asia-northeast1-a
+    metadata:
+      startup-script: |
+        #!/bin/bash
+        curl -sSO https://dl.google.com/cloudagents/install-monitoring-agent.sh
+        sudo bash install-monitoring-agent.sh
+        curl -sSO https://dl.google.com/cloudagents/install-logging-agent.sh
+        sudo bash install-logging-agent.sh
