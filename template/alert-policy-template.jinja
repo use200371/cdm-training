@@ -1,0 +1,32 @@
+resources:
+- name: {{ env["name"] }}
+  type: gcp-types/monitoring-v3:projects.alertPolicies
+  properties:
+    combiner: OR
+    # 参照:
+    # https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.alertPolicies?hl=ja#Aligner
+    conditions:
+    - conditionThreshold:
+        aggregations: 
+          - alignmentPeriod: 60s
+            crossSeriesReducer: REDUCE_NONE
+            perSeriesAligner: ALIGN_MEAN
+        comparison: COMPARISON_GT
+        duration: 60s
+        filter: resource.type="gce_instance" AND metric.type="agent.googleapis.com/cpu/utilization"
+          AND metric.label.cpu_state != "idle"
+        thresholdValue: 90.0
+      displayName: CPU utilization
+    - conditionThreshold:
+        aggregations: 
+          - alignmentPeriod: 60s
+            crossSeriesReducer: REDUCE_NONE
+            perSeriesAligner: ALIGN_NONE
+        comparison: COMPARISON_GT
+        duration: 60s
+        filter: resource.type="gce_instance" AND metric.type="agent.googleapis.com/cpu/load_1m"
+        thresholdValue: 5
+      displayName: CPU load (1m)  
+    displayName: Monitoring-Sample
+    enabled: true
+    

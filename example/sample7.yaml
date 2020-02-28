@@ -1,0 +1,7 @@
+imports:
+- path: ../template/alert-policy-template.jinja
+  name: alert-policy-template.jinja
+    
+resources:    
+- name: alert-policy-sample
+  type: alert-policy-template.jinja
