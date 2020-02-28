@@ -1,0 +1,22 @@
+imports:
+- path: ../template/service-accout-template.jinja
+  name: service-accout-template.jinja
+- path: ../template/ima-policy-template.jinja
+  name: alert-policy-template.jinja
+
+resources:
+- name: service-account-sample
+  type: service-accout-template.jinja
+
+- name: iamPolicyPatch
+  type: alert-policy-template.jinja
+  properties:
+    gcpIamPolicyPatch:
+      add:
+      - role: roles/editor
+        members:
+        - serviceAccount:$(ref.service-account-sample.email)
+      remove:
+      - role: roles/editor
+        members:
+        - user:example@gmail.com
