@@ -21,7 +21,7 @@ resources:
         aggregations: 
           - alignmentPeriod: 60s
             crossSeriesReducer: REDUCE_NONE
-            perSeriesAligner: ALIGN_NONE
+            perSeriesAligner: ALIGN_MEAN
         comparison: COMPARISON_GT
         duration: 60s
         filter: resource.type="gce_instance" AND metric.type="agent.googleapis.com/cpu/load_1m"
