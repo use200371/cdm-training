@@ -9,7 +9,7 @@ resources:
     - conditionThreshold:
         aggregations: 
           - alignmentPeriod: 60s
-            crossSeriesReducer: REDUCE_MEAN
+            crossSeriesReducer: REDUCE_NONE
             perSeriesAligner: ALIGN_MEAN
         comparison: COMPARISON_GT
         duration: 60s
@@ -22,7 +22,7 @@ resources:
     - conditionThreshold:
         aggregations: 
           - alignmentPeriod: 60s
-            crossSeriesReducer: REDUCE_MEAN
+            crossSeriesReducer: REDUCE_NONE
             perSeriesAligner: ALIGN_MEAN
         comparison: COMPARISON_GT
         duration: 60s
