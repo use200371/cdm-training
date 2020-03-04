@@ -9,23 +9,27 @@ resources:
     - conditionThreshold:
         aggregations: 
           - alignmentPeriod: 60s
-            crossSeriesReducer: REDUCE_NONE
+            crossSeriesReducer: REDUCE_MEAN
             perSeriesAligner: ALIGN_MEAN
         comparison: COMPARISON_GT
         duration: 60s
         filter: resource.type="gce_instance" AND metric.type="agent.googleapis.com/cpu/utilization"
           AND metric.label.cpu_state != "idle"
         thresholdValue: 90.0
+        trigger:
+          count: 1
       displayName: CPU utilization
     - conditionThreshold:
         aggregations: 
           - alignmentPeriod: 60s
-            crossSeriesReducer: REDUCE_NONE
+            crossSeriesReducer: REDUCE_MEAN
             perSeriesAligner: ALIGN_MEAN
         comparison: COMPARISON_GT
         duration: 60s
         filter: resource.type="gce_instance" AND metric.type="agent.googleapis.com/cpu/load_1m"
         thresholdValue: 5
+        trigger:
+          count: 1
       displayName: CPU load (1m)  
     displayName: Monitoring-Sample
     enabled: true
