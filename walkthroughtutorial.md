@@ -43,13 +43,20 @@ cd example
 - CentOSサーバのインスタンスを作成します。
 
 ```sh
-gcloud deployment-manager deployments create sample2 --config sample2.yaml
+gcloud deployment-manager deployments create sample1 --config sample1.yaml
 ```
 
 
 - 作成された事が確認出来たら後片付けをします。
 
 ```sh
-gcloud deployment-manager deployments delete sample2
+gcloud deployment-manager deployments delete sample1
 ```
 
+## サービスアカウントの作成
+
+- 例えばGCEインスタンスに対して役割を与えたい場合、まずサービスアカウントを作成して役割を付与します。
+
+- この作成したサービスアカウントをインスタンスに割り当てします。
+
+- デフォルトで割り当てされるサービスアカウントは編集者の役割が付与されておりある程度の操作が行える為、最小限の権限を付与したサービスアカウントを使用する事が望ましいです。
